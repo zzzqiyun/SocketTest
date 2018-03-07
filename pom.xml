@@ -39,6 +39,8 @@
                                     <mainClass>socTest.InetAddressTest</mainClass>
                                     <mainClass>coderTest.URLDecoderTest</mainClass>
                                     <mainClass>dowUtil.MultiThreadDown</mainClass>
+                                    <mainClass>socketTest.Client</mainClass>
+                                    <mainClass>socketTest.Server</mainClass>
                                 </transformer>
                             </transformers>
                         </configuration>
