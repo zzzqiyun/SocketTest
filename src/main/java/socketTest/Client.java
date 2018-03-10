@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.Socket;
+import java.net.SocketAddress;
 
 /**
  * Created on 2018/3/7.
@@ -12,7 +13,9 @@ import java.net.Socket;
  */
 public class Client {
   public static void main(String args[])throws Exception{
-    Socket socket = new Socket("127.0.0.1",33000);
+    Socket socket = new Socket("127.0.0.1",9999);
+    socket.setSoTimeout(10000);
+    System.out.println("与服务器端是否连接成功："+socket.isConnected());
     //将socket对应的输入流包装成bufferedReader
     InputStream is = socket.getInputStream();
     InputStreamReader isr = new InputStreamReader(is);
